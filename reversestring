@@ -10,9 +10,7 @@ if(c>=48 && c<=57){
 System.out.println("error");
 break;
 }
-String ns=" ";
-ns=ns+c;
-System.out.print(ns);
+System.out.print(c);
 }
 }
 }
