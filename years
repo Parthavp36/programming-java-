@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class dayc{
+public static void main(String args[]){
+float days;
+Scanner obj=new Scanner(System.in);
+System.out.println("enter the no of days : ");
+days=obj.nextFloat();
+if(days==(int)days && days>=1){
+int day1=(int)days;
+int yr=day1/365;
+int rem1=day1%365;
+int mon=rem1/31;
+int rem2=rem1%31;
+int wk=rem2/7;
+int day=rem2%7;
+System.out.println("years : "+yr);
+System.out.println("months : "+mon);
+System.out.println("weeks : "+wk);
+System.out.println("days : "+day);
+}
+else if(days!=(int)days || days<=0){
+System.out.println("days cannot be in decimal  or negative");
+}
+}
+}
