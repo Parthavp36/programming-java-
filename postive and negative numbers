@@ -1,0 +1,36 @@
+import java.util.*;
+public class posneg{
+public static void main(String args[]){
+try{
+int n;
+Scanner obj=new Scanner(System.in);
+System.out.println("enter the no of elements : ");
+n=obj.nextInt();
+int pos=0;
+int neg=0;
+float num;
+float posavg=0;
+float negavg=0;
+for(int i=0;i<n;i++){
+System.out.println("enter the num "+i +" : ");
+num=obj.nextInt();
+if(num>=0){
+pos++;
+posavg+=num;
+}
+else{
+neg++;
+negavg+=num;
+}
+}
+System.out.println("no of positive numbers : "+ pos);
+System.out.println("positive numbers average : "+ posavg/pos);
+System.out.println("no of negative numbers : "+ neg);
+System.out.println("negative numbers average : "+ negavg/neg);
+}
+catch(Exception s){
+System.out.println("invalid input ");
+}
+}
+}
+
