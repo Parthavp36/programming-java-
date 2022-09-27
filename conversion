@@ -1,0 +1,32 @@
+import java.util.*;
+public class conversion{
+public void convo(int a,int b){
+int rem;
+String rev="";
+while(a!=0){
+rem=a%b;
+rev=rem+rev;
+a/=b;
+}
+System.out.println(rev);
+}
+public static void main(String args[])
+{
+try{
+Scanner obj=new Scanner(System.in);
+System.out.print("enter the number : ");
+float n=obj.nextFloat();
+conversion o2=new conversion();
+int n1=(int)n;
+if(n1==n){
+o2.convo(n1,2);
+o2.convo(n1,8);
+}
+else
+System.out.println("invalid!!!");
+}
+catch(Exception a){
+System.out.println("invalid.....");
+}
+}
+}
