@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class reverse1{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+Scanner o=new Scanner(System.in);
+String a;
+String a1="";
+int r;
+int s=0;
+System.out.println("enter the choice:");
+int n=obj.nextInt();
+if(n==1){
+System.out.println("enter the word to reverse");
+a=o.nextLine();
+char c;
+for(int i=a.length()-1;i>=0;i--){
+if(a.charAt(i)>=65 && a.charAt(i)<=90 || a.charAt(i)>=97 && a.charAt(i)<=122)
+a1=a1+a.charAt(i);
+else{
+System.out.print("invalid input");
+}
+}
+if(a1.equals(a)){
+System.out.print("string  is palindrome:");
+}
+else{
+System.out.print("string is not palindrome:");
+}
+}
+else if(n==2){
+System.out.println("enter the number to reverse");
+int b=o.nextInt();
+int b1=b;
+while(b!=0){
+r=b%10;
+s=s*10+r;
+b=b/10;
+}
+System.out.println("reverse of num is:"+s);
+if(s==b1){
+System.out.print("number  is palindrome:");
+}
+else{
+System.out.print("number is not palindrome:");
+}
+}
+}
+}
