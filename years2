@@ -1,0 +1,33 @@
+import java.util.*;
+public class year{
+public static void main(String[] args){
+Scanner obj=new Scanner(System.in);
+try{
+System.out.println("enter the year:");
+int a=obj.nextInt();
+if(a>1000 && a<2050){
+if(a%4==0 && a%100!=0 || a%400==0){
+System.out.println("it is leap year");
+int b=a+4;
+int b1=a-4;
+System.out.println("next leap year"+b);
+System.out.println("is previous leap year"+b1);
+}
+else{
+int b=a%4;
+int c=a-b;
+int c1=c+4;
+System.out.println("not a leap year");
+System.out.println("previous leap year"+c);
+System.out.println("next leap year"+c1);
+}
+}
+else{
+System.out.println("year should be in 4 digits & negative years are not allowed");
+}
+}
+catch(InputMismatchException a){
+System.out.println("invalid input  ");
+}
+}
+}
